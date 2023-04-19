@@ -46,8 +46,6 @@ const repetidos2 = {
   H: [],
 };
 
-// GRUPOS: A-H (array 0-7)
-
 // TRANSFERINDO AS LIS PARA AS VARIÁVEIS POTE (fazendo uma cópia dos times para transferir aos grupos)
 for (let j = 0; j < 8; j++) {
   pote1.push(document.querySelector(`#a1${grupos[j]}`));
@@ -191,7 +189,7 @@ function sorteiaTime1() {
     }
 
     num = Math.floor(Math.random() * 8 + 1);
-    // verificação de sorteios repetidos (não está funcionando)
+    // verificação de sorteios repetidos
     while (repetidos.includes(num) === true) {
       num = Math.floor(Math.random() * 8 + 1);
     }
@@ -207,7 +205,7 @@ function sorteiaTime1() {
       const novaBandeira = poteCopy2[num - 1].children[0].cloneNode(true);
 
       if (poteCopy2[num - 1].id === "b2F") {
-        // bandeira suíça (quadrada)
+        // bandeira quadrada da suíça
         novaBandeira.style.marginLeft = "10px";
       } else {
         novaBandeira.style.marginLeft = "5px";
@@ -279,7 +277,7 @@ function sorteiaTime1() {
     }
 
     num = Math.floor(Math.random() * 8 + 1);
-    // verificação de sorteios repetidos (não está funcionando)
+    // verificação de sorteios repetidos
     while (repetidos.includes(num) === true) {
       num = Math.floor(Math.random() * 8 + 1);
     }
@@ -438,8 +436,6 @@ limpar.addEventListener("click", function limpar() {
         gru.children[5].children[j].children[0].replaceWith(newSpan);
         newSpan.innerText = `${grupos[i]}1`;
       }
-
-      // a remoção das bandeiras também poderia ser feita declarando cada uma delas com a classe de sua respectiva posição no grupo (A1, B2, etc) no momento em que elas são adicionadas em sorteiaTime(), e substituindo cada uma dessas suas respectivas classes por newSpan, aqui em limpar()
     }
 
     // limpa bandeiras pote 2

@@ -91,6 +91,7 @@ function sorteiaTime1() {
   if (a < 8) {
     num = Math.floor(Math.random() * 7 + 2);
 
+    // PARA EVITAR SORTEIO DE TIMES REPETIDOS
     while (repetidos.includes(num) === true) {
       num = Math.floor(Math.random() * 7 + 2);
     }
@@ -102,38 +103,6 @@ function sorteiaTime1() {
     document
       .getElementById(`grupo-${grupos[a]}`)
       .classList.add(poteCopy1[num - 1].classList[0]);
-
-    // VERSÃO ANTIGA DE ADIÇÃO DOS TIMES SORTEADOS
-    // switch (num) {
-    //     case 2:
-    //         document.querySelector(`#${grupos[a]}1`).replaceWith(poteCopy1[1]); // RIVER PLATE
-    //         document.getElementById(`grupo-${grupos[a]}`).classList.add(poteCopy1[1].classList[0]);
-    //         break;
-    //     case 3:
-    //         document.querySelector(`#${grupos[a]}1`).replaceWith(poteCopy1[2]); // BOCA JUNIORS
-    //         document.getElementById(`grupo-${grupos[a]}`).classList.add(poteCopy1[2].classList[0]);
-    //         break;
-    //     case 4:
-    //         document.querySelector(`#${grupos[a]}1`).replaceWith(poteCopy1[3]); // FLAMENGO
-    //         document.getElementById(`grupo-${grupos[a]}`).classList.add(poteCopy1[3].classList[0]);
-    //         break;
-    //     case 5:
-    //         document.querySelector(`#${grupos[a]}1`).replaceWith(poteCopy1[4]); // NACIONAL
-    //         document.getElementById(`grupo-${grupos[a]}`).classList.add(poteCopy1[4].classList[0]);
-    //         break;
-    //     case 6:
-    //         document.querySelector(`#${grupos[a]}1`).replaceWith(poteCopy1[5]); // PEÑAROL
-    //         document.getElementById(`grupo-${grupos[a]}`).classList.add(poteCopy1[5].classList[0]);
-    //         break;
-    //     case 7:
-    //         document.querySelector(`#${grupos[a]}1`).replaceWith(poteCopy1[6]); // ATLÉTICO MINEIRO
-    //         document.getElementById(`grupo-${grupos[a]}`).classList.add(poteCopy1[6].classList[0]);
-    //         break;
-    //     case 8:
-    //         document.querySelector(`#${grupos[a]}1`).replaceWith(poteCopy1[7]); // ATHLETICO PARANAENSE
-    //         document.getElementById(`grupo-${grupos[a]}`).classList.add(poteCopy1[7].classList[0]);
-    //         break;
-    // }
 
     repetidos.push(num);
   }
