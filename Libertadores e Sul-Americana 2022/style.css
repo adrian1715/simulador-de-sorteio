@@ -14,8 +14,9 @@ p {
 #libertadores {
   background-image: url("https://resources-us.yinzcam.com/csf/shared/bg-1.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 1016px; /* horizontal vertical */
-  height: auto 100vh;
+  /* horizontal vertical */
+  /* background-size: 100% 100%;  */
+  height: 100%;
   padding-bottom: 8px;
 }
 /* para o background-size não se alterar após o sorteio */
@@ -80,7 +81,7 @@ li span {
 }
 
 #sul-americana {
-  background-image: url("../../../../images/Simulador\ de\ Sorteio\ -\ Times/bg-1.jpg");
+  background-image: url("../images/bg-1.jpg");
   background-repeat: no-repeat;
   background-size: 100% 1090px;
   height: auto 100vh !important;
